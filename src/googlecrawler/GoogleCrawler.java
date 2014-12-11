@@ -67,7 +67,7 @@ import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
 
 /**
- * Search Google example.
+ * Search Google example. kma
  *
  */
 public class GoogleCrawler implements ActionListener, WindowListener, KeyListener, PopupMenuListener, MouseListener, FocusListener, DocumentListener {
