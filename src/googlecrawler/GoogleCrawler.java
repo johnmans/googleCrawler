@@ -233,19 +233,19 @@ public class GoogleCrawler implements ActionListener, WindowListener, KeyListene
             } finally {
                 driver.close();
 
-                String messageString = "<html><p style=\"font-family:arial;font-size:9px;\">Παραγόμενο αρχείο:<br><br>"
+                String messageString = "<html><p style=\"font-family:arial;font-size:9px;\">Created file:<br><br>"
                         + "<u>" + rawFileName + "</u>&nbsp;<font color=#0000FF>(" + new File(rawFileName).length() + " bytes)</font></p></html>";
-                JOptionPane.showMessageDialog(null, messageString, "Η διαδικασία ολοκληρώθηκε", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(null, messageString, "The process has been completed", JOptionPane.INFORMATION_MESSAGE);
             }
             //System.out.println("Search Now!");
         } else if (e.getActionCommand().equals("regex_apply")) {
             if (new File(rawFileName).exists()) {
                 regexOnFile();
 
-                String messageString = "<html><p style=\"font-family:arial;font-size:9px;\">Παραγόμενο αρχείο:<br><br>"
+                String messageString = "<html><p style=\"font-family:arial;font-size:9px;\">Created file:<br><br>"
                         + "<u>" + regexFileName + "</u>&nbsp;<font color=#0000FF>(" + new File(regexFileName).length() + " bytes)</font><br><br>"
-                        + "Αποτελέσματα: " + regexResults + "</p></html>";
-                JOptionPane.showMessageDialog(null, messageString, "Η διαδικασία ολοκληρώθηκε", JOptionPane.INFORMATION_MESSAGE);
+                        + "Results: " + regexResults + "</p></html>";
+                JOptionPane.showMessageDialog(null, messageString, "The process has been completed", JOptionPane.INFORMATION_MESSAGE);
             } else {
                 // do nothing
             }
@@ -322,24 +322,24 @@ public class GoogleCrawler implements ActionListener, WindowListener, KeyListene
         searchInput.setFont(new Font("Arial", Font.PLAIN, 20));
         searchInput.addFocusListener(this);
         
-        JRadioButton last24_but = new JRadioButton("24 ώρες");
+        JRadioButton last24_but = new JRadioButton("24 hours");
         last24_but.setActionCommand(last24);
         
-        JRadioButton lastWeek_but = new JRadioButton("1 εβδομάδα");
+        JRadioButton lastWeek_but = new JRadioButton("1 week");
         lastWeek_but.setActionCommand(lastWeek);
         
-        JRadioButton lastMonth_but = new JRadioButton("1 μήνας");
+        JRadioButton lastMonth_but = new JRadioButton("1 month");
         lastMonth_but.setActionCommand(lastMonth);
         lastMonth_but.setSelected(true);
         
-        JRadioButton last6months_but = new JRadioButton("6 μήνες");
+        JRadioButton last6months_but = new JRadioButton("6 months");
         last6months_but.setActionCommand(last6months);
         last6months_but.setSelected(true);
         
-        JRadioButton lastYear_but = new JRadioButton("1 έτος");
+        JRadioButton lastYear_but = new JRadioButton("1 year");
         lastYear_but.setActionCommand(lastYear);
         
-        JRadioButton whenever_but = new JRadioButton("10 έτη");
+        JRadioButton whenever_but = new JRadioButton("10 years");
         whenever_but.setActionCommand(whenever);
         
         JRadioButton jrbArray[] = new JRadioButton[6];
@@ -354,7 +354,7 @@ public class GoogleCrawler implements ActionListener, WindowListener, KeyListene
         JPanel panel = new JPanel();
         panel.setLayout(null);
         panel.setBounds(10, 50, 122, 150);
-        panel.setBorder(BorderFactory.createTitledBorder(BorderFactory.createEtchedBorder(EtchedBorder.LOWERED), "Βάθος χρόνου"));
+        panel.setBorder(BorderFactory.createTitledBorder(BorderFactory.createEtchedBorder(EtchedBorder.LOWERED), "Ιnveteracy"));
         //panel.setBackground(bgColor);
         
         for (int i=0; i<jrbArray.length; i++) {
@@ -375,9 +375,9 @@ public class GoogleCrawler implements ActionListener, WindowListener, KeyListene
         JPanel panel2 = new JPanel();
         panel2.setLayout(null);
         panel2.setBounds(137, 50, 153, 50);
-        panel2.setBorder(BorderFactory.createTitledBorder(BorderFactory.createEtchedBorder(EtchedBorder.LOWERED), "Ωμά δεδομένα"));
+        panel2.setBorder(BorderFactory.createTitledBorder(BorderFactory.createEtchedBorder(EtchedBorder.LOWERED), "Raw data"));
         
-        Label fnLabel = new Label("Αρχείο:");
+        Label fnLabel = new Label("File:");
         fnLabel.setFont(new Font("Arial", Font.PLAIN, 12));
         fnLabel.setForeground(Color.decode("0x888888"));
         //fnLabel.setBackground(Color.red);
@@ -422,7 +422,7 @@ public class GoogleCrawler implements ActionListener, WindowListener, KeyListene
         label0.setHorizontalAlignment(SwingConstants.CENTER);
         label0.setForeground(Color.white);
         label0.setFont(new Font("Arial", Font.BOLD, 11));
-        label0.setText("Εφαρμογή regex");
+        label0.setText("Apply regex");
         label0.setBounds(0, 0, 128, 18);
         regexApply.add(label0);
         
@@ -449,7 +449,7 @@ public class GoogleCrawler implements ActionListener, WindowListener, KeyListene
         }
         comboButton.setBounds(120, 45, 18, 18);
         
-        Label fnLabel2 = new Label("Αρχείο:");
+        Label fnLabel2 = new Label("File:");
         fnLabel2.setFont(new Font("Arial", Font.PLAIN, 12));
         fnLabel2.setForeground(Color.decode("0x888888"));
         //fnLabel.setBackground(Color.red);
@@ -497,7 +497,7 @@ public class GoogleCrawler implements ActionListener, WindowListener, KeyListene
         label.setHorizontalAlignment(SwingConstants.CENTER);
         label.setForeground(Color.white);
         label.setFont(new Font("Arial", Font.BOLD, 13));
-        label.setText("Αναζήτηση");
+        label.setText("Search");
         label.setBounds(2, 2, 86, 26);
         goSearch.add(label);
         

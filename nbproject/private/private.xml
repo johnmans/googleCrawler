@@ -6,6 +6,8 @@
         <group name="c++"/>
         <group name="html"/>
         <group name="python"/>
-        <group name="java"/>
+        <group name="java">
+            <file>file:/home/ninja/development/java/googleCrawler/src/googlecrawler/GoogleCrawler.java</file>
+        </group>
     </open-files>
 </project-private>
