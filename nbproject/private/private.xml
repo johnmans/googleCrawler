@@ -6,6 +6,7 @@
         <group name="c++"/>
         <group name="html"/>
         <group name="python"/>
+        <group name="C/C++"/>
         <group name="java"/>
     </open-files>
 </project-private>
